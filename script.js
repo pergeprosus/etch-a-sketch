@@ -6,7 +6,7 @@ for (let i = 0; i < 16; i++) {
     let container = document.getElementById("container");
     let cell = document.createElement("gridcell");
     let allcell = document.getElementsByClassName("gridcell")
-    cell.innerHTML;
+    cell.innerHTML = "o"
     container.appendChild(cell);
     biggercontainer.appendChild(container);
 }
