@@ -1,7 +1,7 @@
-
+let mainsize = 256;
 //idea: make row and grid loops
 //vertical loop(?)
-for (let i = 0; i <= 16; i++) {
+for (let i = 0; i <= mainsize; i++) {
     let biggercontainer = document.getElementById("biggercontainer");
     let container = document.getElementById("container");
     let cell = document.createElement("gridcell");

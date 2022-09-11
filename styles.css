@@ -18,7 +18,7 @@ body {
 }
 
  gridcell {
-    border: 0.5px solid black;
+    border: 0.1px solid black;
     font-size: 4px;
     background: white;
     display: inline-block;
@@ -40,14 +40,19 @@ body {
 }
 
 #container {
-    display: grid;
+    display: inline-flex;
     align-self: center;
     justify-content: center;
-    grid-template-columns: 100px 100px;
+    grid-template-columns:50px 50px 50px;
+    margin: 0;
+    width: 500px;
+    height: 100px;
+    line-height: 0;
 }
 
 #biggercontainer {
     align-self: center;
-    justify-content: center;
     display: flex;
+    margin: 0;
+
 }
