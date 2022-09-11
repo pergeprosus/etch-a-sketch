@@ -3,16 +3,18 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin: 0;
 }
 
 #header {
     font-size: 100px;
-    display: flex;
-}
-
-#biggercontainer {
-    display: grid;
-    flex-direction: column;
+    font-weight: lighter;
+    background: #083D77;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: 5px 5px black;
+    margin-bottom:10vh
 }
 
  gridcell {
