@@ -1,8 +1,10 @@
-let container = document.getElementById("container");
+
 //idea: make row and grid loops
-for (let i = 0; i < 6; i++) {
+//vertical loop(?)
+for (let i = 0; i < 16; i++) {
+    let container = document.getElementById("container");
     let cell = document.createElement("block");
-    let cells = document.getElementsByClassName("block")
+    let allcell = document.getElementsByClassName("block")
     cell.innerHTML = "O";
     container.appendChild(cell);
 }

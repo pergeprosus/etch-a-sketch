@@ -10,6 +10,12 @@ body {
     display: flex;
 }
 
-#container {
+#biggercontainer {
     display: grid;
+    flex-direction: column;
+
+}
+
+#block {
+    background: black;
 }
