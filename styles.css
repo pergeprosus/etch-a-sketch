@@ -24,7 +24,8 @@ gridcell {
     display: table;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
 
 }
 
@@ -44,10 +45,12 @@ gridcell {
 
 #rowcontainer,
 rowcontainer {
-    display: inline-block;
+    display: inline-flex;
     background: pink;
     flex-wrap: wrap;
     margin: 0;
+    padding: 0;
+    width: 300px;
 }
 
 #biggercontainer {
