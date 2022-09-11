@@ -19,10 +19,10 @@ body {
 
  gridcell {
     border: 0.5px solid black;
-    font-size: 50px;
+    font-size: 4px;
     background: white;
-    width:max-content;
-    height:max-content;
+    display: inline-block;
+    margin: 0;
 }
 
 #sizerequest {
@@ -40,12 +40,10 @@ body {
 }
 
 #container {
-    width: 50vh;
-    height: 50vh;
-    display: flex;
+    display: grid;
     align-self: center;
     justify-content: center;
-
+    grid-template-columns: 100px 100px;
 }
 
 #biggercontainer {
