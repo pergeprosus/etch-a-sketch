@@ -13,9 +13,9 @@ body {
 #biggercontainer {
     display: grid;
     flex-direction: column;
-
 }
 
-#block {
-    background: black;
+ gridcell {
+    border: 1px solid black;
+    font-size: 50px;
 }
