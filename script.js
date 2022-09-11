@@ -1,4 +1,4 @@
-let mainsize = 256;
+let mainsize = 16;
 //idea: make row and grid loops
 //vertical loop(?)
 for (let i = 0; i <= mainsize; i++) {
