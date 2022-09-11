@@ -21,9 +21,7 @@ body {
 gridcell {
     font-size: 4px;
     background: greenyellow;
-    display: table;
-    margin: 0;
-    padding: 0;
+    display: flex;
     width: 10px;
     height: 10px;
 }
@@ -50,11 +48,11 @@ rowcontainer {
     margin: 0;
     padding: 0;
     border: 3px solid black;
-    width: 500px;
-    height: 500px;
+    max-width: 500px;
+    min-height: 500px;
     flex-wrap: wrap;
     white-space: nowrap;
-    align-content:flex-start;
+    align-content: flex-start;
 }
 
 #biggercontainer {
@@ -68,3 +66,6 @@ rowcontainer {
     border-radius: 25px;
 }
 
+#smallercontainer {
+    border: 3px solid black;
+}
