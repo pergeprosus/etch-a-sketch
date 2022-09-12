@@ -48,7 +48,6 @@ rowcontainer {
     background: pink;
     margin: 0;
     padding: 0;
-    border: 3px solid navy;
     flex-wrap: wrap;
     white-space: nowrap;
     align-content: flex-start;
@@ -67,5 +66,7 @@ rowcontainer {
 }
 
 #smallercontainer {
-    border: 3px solid black;
+    display: inline-table;
+    padding: 0;
+    margin: 0;
 }

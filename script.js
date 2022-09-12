@@ -10,8 +10,7 @@ for (let i = 0; i <= mainsize - 1; i++) {
 }
 
 for (let i = 0; i <= mainsize; i++) {
-    let fuck = document.createElement("rowcontainer");
-    
-    smallercontainer.appendChild(fuck);
+    let flip = document.createElement("rowcontainer");
+    smallercontainer.appendChild(flip);
 }
 //Current goal: allow fullscale cells for each new one
