@@ -7,10 +7,10 @@ for (let i = 0; i <= mainsize - 1; i++) {
     let container = document.getElementById("rowcontainer");
     let cell = document.createElement("gridcell");
     container.appendChild(cell);
+   
 }
-
-for (let i = 0; i <= mainsize; i++) {
+for (let f = 0; f <= mainsize - 2; f++) {
     let flip = document.createElement("rowcontainer");
     smallercontainer.appendChild(flip);
-}
+    }
 //Current goal: allow fullscale cells for each new one
