@@ -8,8 +8,8 @@ for (let i = 0; i <= mainsize - 1; i++) {
     let cell = document.createElement("gridcell");
     container.appendChild(cell);
 }
-
-for (let j = 0; j <= mainsize - 1; j++) {
+//Clone containers
+for (let j = 0; j <= mainsize - 3; j++) {
     let containerclone = container.cloneNode(true);
     smallercontainer.appendChild(containerclone);
 }
