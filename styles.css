@@ -18,7 +18,8 @@ body {
     text-shadow: 5px 5px black;
 }
 
-gridcell {
+gridcell,
+.griddy {
     font-size: 4px;
     background: greenyellow;
     display: flex;
