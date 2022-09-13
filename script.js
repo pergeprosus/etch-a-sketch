@@ -19,11 +19,12 @@ for (let j = 0; j <= mainsize - 2; j++) {
     console.log('number of clones (cells - 1)')
 
 }
-
-if ('gridcell') {
-document.querySelector('gridcell').addEventListener('mouseover', function() {
-document.querySelector('gridcell').style.backgroundColor = 'black'
-})
+//Beta whatever for drawing tool, currently only works on one dot
+for (let q = 0; q <= mainsize -1; i++) {
+    document.querySelector('gridcell').addEventListener('mouseover', function() {
+        document.querySelector('gridcell').style.backgroundColor = 'black'
+        })
 }
+
 
 //Current goal: test functional event listen

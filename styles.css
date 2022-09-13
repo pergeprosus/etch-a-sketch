@@ -23,8 +23,8 @@ gridcell,
     font-size: 4px;
     background: greenyellow;
     display: flex;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: flex;
 }
 
@@ -62,7 +62,7 @@ rowcontainer {
 #biggercontainer {
     align-self: center;
     display: inline-block;
-    margin: 10px;
+    margin-top: -36px;
     flex-direction: column;
     background: slategray;
     padding: 50px;
