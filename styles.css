@@ -22,9 +22,13 @@ gridcell {
     font-size: 4px;
     background: greenyellow;
     display: flex;
-    width: 10px;
-    height: 10px;
+    width: 40px;
+    height: 40px;
     display: flex;
+}
+
+.hover {
+    background-color: black;
 }
 
 #sizerequest {
@@ -69,4 +73,6 @@ rowcontainer {
     display: inline-table;
     padding: 0;
     margin: 0;
+    max-height: 50px;
+    max-width: 700px;
 }
