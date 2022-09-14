@@ -1,13 +1,11 @@
-body {
+ html, body {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
     margin: 0;
     background: #EBEBD3;
     padding: 0;
+    height: 100%;
 }
-
 #header {
     font-size: 100px;
     font-weight: lighter;
@@ -75,4 +73,17 @@ rowcontainer {
     padding: 0;
     margin: 0;
 
+}
+
+#footer {
+    background-color: #083D77;
+    min-width: 100%;
+    display: flex;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    min-height:5%;
+    margin-top: 5%;
+    margin-bottom:0;
+    padding: 0;
 }

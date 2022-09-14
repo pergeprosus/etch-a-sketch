@@ -1,4 +1,3 @@
-window.onload = function() {
 let mainsize = 16;
 let mainsize2 = mainsize - 1;
 //idea: make row and grid loops
@@ -26,5 +25,4 @@ for (let z = 0; z < zingle.length; z++) {
     zingle[z].addEventListener('mouseover', function () {
         zingle[z].style.backgroundColor = 'black';
     })
-}
 }
