@@ -24,5 +24,6 @@ for (let j = 0; j <= mainsize2 - 1; j++) {
     smallercontainer.appendChild(containerclone);
     console.log('number of clone rows (cells - 1)')
 }
-console.log(grids.length)
+let zingle = document.getElementsByTagName('gridcell');
+console.log(zingle.length)
 
