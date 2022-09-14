@@ -25,5 +25,9 @@ for (let j = 0; j <= mainsize2 - 1; j++) {
     console.log('number of clone rows (cells - 1)')
 }
 let zingle = document.getElementsByTagName('gridcell');
-console.log(zingle.length)
-
+for (let z = 0; z <= zingle.length; z++) {
+    zingle[z].addEventListener('mouseover', function () {
+        zingle[z].style.backgroundColor = 'black';
+        console.log('touch')
+    })
+}
