@@ -21,7 +21,7 @@ body {
 gridcell,
 .griddy {
     font-size: 4px;
-    background: yellow;
+    background: white;
     display: flex;
     width: 30px;
     height: 30px;
@@ -64,9 +64,9 @@ rowcontainer {
     display: inline-block;
     margin-top: -36px;
     flex-direction: column;
-    background: slategray;
+    background: red;
     padding: 50px;
-    border: 4px solid navy;
+    border: 4px solid darkred;
     border-radius: 25px;
 }
 

@@ -1,3 +1,4 @@
+window.onload = function() {
 let mainsize = 16;
 let mainsize2 = mainsize - 1;
 //idea: make row and grid loops
@@ -12,10 +13,6 @@ for (let q = 0; q <= mainsize2; q++) {
     container.appendChild(cell);
     let grids = document.querySelectorAll("gridcell");
     //First grid's mouseover loop thing
-    grids[q].addEventListener('mouseover', function () {
-        grids[q].style.backgroundColor = 'black';
-        console.log('touch')
-    })
     console.log('number of cells in a row that will be colored');
 }
 for (let j = 0; j <= mainsize2 - 1; j++) {
@@ -25,9 +22,9 @@ for (let j = 0; j <= mainsize2 - 1; j++) {
     console.log('number of clone rows (cells - 1)')
 }
 let zingle = document.getElementsByTagName('gridcell');
-for (let z = 0; z <= zingle.length; z++) {
+for (let z = 0; z < zingle.length; z++) {
     zingle[z].addEventListener('mouseover', function () {
         zingle[z].style.backgroundColor = 'black';
-        console.log('touch')
     })
+}
 }
