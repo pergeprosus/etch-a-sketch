@@ -40,31 +40,46 @@ function colorenabler() {
 }
 colorenabler();
 
-function scaler() { 
-    let container = document.getElementById('rowcontainer'); 
+function scaler() {
+    let container = document.getElementById('rowcontainer');
     let containers = document.getElementsByTagName('rowcontainer')
-    let elements = container.getElementsByTagName('gridcell'); 
+    let elements = container.getElementsByTagName('gridcell');
     let smallercontainer = document.getElementById("smallercontainer");
     let smalcontainlength = document.getElementById("smallercontainer").childElementCount;
-    for (let i = 0; i < elements.length; i++) { 
-        let element = elements[i]; 
-        elements.style.transform ="scale(" + (1 / elements.length) + ")"; 
-        elements.style.backgroundColor = "white";
-    } 
+    for (let i = 0; i < elements.length; i++) {
+        let element = elements[i];
+        elements.style.transform = "scale(" + (1 / elements.length) + ")";
+    }
 }
 let elements = container.getElementsByTagName('gridcell');
 
 function removeall() {
-    for (let i = 0; i < mainsize2 + 1; i++) {
-    let smallcontainer = document.getElementById('smallercontainer');
-    let containers = document.getElementsByTagName('rowcontainer')
-    smallcontainer.removeChild(smallcontainer.lastChild);
-    smallcontainer.removeChild(smallcontainer.lastChild);
+    for (let i = 0; i < mainsize2; i++) {
+        let smallcontainer = document.getElementById('smallercontainer');
+        let containers = document.getElementsByTagName('rowcontainer');
+        let elements = container.getElementsByTagName('gridcell');
+        smallcontainer.removeChild(smallcontainer.lastChild);
+    }
 }
-}
+    function colorgone() {
+        let zingle = document.getElementsByTagName('gridcell');
+        for (let z = 0; z < zingle.length; z++) {
 
-//Current goal: Allow for dynamic box sizes
-button.addEventListener('click', function () {
-    console.log('button press')
-    removeall();
-})
+            zingle[z].style.backgroundColor = 'white';
+        }
+    }
+
+    //Current goal: Allow for dynamic box sizes
+    button.addEventListener('click', function () {
+        console.log('button press')
+        removeall();
+        mainsize = 32;
+        clonerowcreation();
+        gridcellcreation();
+        colorgone();
+        colorenabler();
+        sizecounteration();
+
+    })
+
+//Current goal: remove coloring after deletion...
