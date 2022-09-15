@@ -74,8 +74,8 @@ function removeall() {
         console.log('button press')
         removeall();
         mainsize = 32;
-        clonerowcreation();
         gridcellcreation();
+        clonerowcreation();
         colorgone();
         colorenabler();
         sizecounteration();
