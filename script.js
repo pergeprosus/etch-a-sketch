@@ -71,15 +71,17 @@ function removeall() {
 
     //Current goal: Allow for dynamic box sizes
     button.addEventListener('click', function () {
+        if (mainsize < 64) {
         console.log('button press')
         removeall();
-        mainsize = 32;
+        mainsize = mainsize * 2;
+
         gridcellcreation();
         clonerowcreation();
         colorgone();
         colorenabler();
         sizecounteration();
-
+        }
     })
 
 //Current goal: remove coloring after deletion...
