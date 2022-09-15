@@ -42,6 +42,7 @@ gridcell,
     border: 1px solid black;
     background: #F4D35E;
     color: #083D77;
+    align-self: center;
 }
 
 #rowcontainer,
