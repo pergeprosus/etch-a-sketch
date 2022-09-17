@@ -78,8 +78,8 @@ function gridsize() {
     for (let n = 0; n < gridso.length; n++) {
 
         gridso[n].style.width = gridso[n].offsetHeight;
-        // gridso[n].style.height = "  " + (1 / gridso.length) + "px";
-        console.log("achieved")
+        //gridso[n].style.height = "  " + (1 / gridso.length) + "px";
+      console.log("achieved")
 
     }
 }
@@ -87,11 +87,10 @@ function gridsize() {
 
 //Current goal: Allow for dynamic box sizes
 button.addEventListener('click', function () {
-    mainsize = prompt("New size below 100");
-    if (mainsize < 99) {
+    mainsize = prompt("Enter the new size (must be below 100)");
+    if (mainsize < 100) {
         console.log('button press')
         removeall();
-        mainsize2 = mainsize - 1;
         gridcellcreation();
         clonerowcreation()
         gridsize();
@@ -100,7 +99,7 @@ button.addEventListener('click', function () {
         sizecounteration();
     }
     else {
-        alert("TOO HIGH!!!")
+        alert("INVALID ENTRY")
 
     }
 
