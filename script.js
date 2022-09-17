@@ -71,19 +71,25 @@ function colorgone() {
 
 function gridsize() {
     let containers = document.getElementsByTagName('rowcontainer');
-    let width =
-    grids.style.width = "  " + (1 / grids.length) + "";
-    grids.style.height = "  " + (1 / grids.length) + "";
+    let width;
+    let gridso = document.getElementsByClassName('gridcell');
+    
+    for (let n = 0; n < gridso.length; n++) {
+
+    
+    gridso[n].style.width = "  " + (1 / grids.length) + "";
+    gridso[n].style.height = "  " + (1 / grids.length) + "";
     containers.style.width = "  " + (1 / containers.length) + "";
+    }
 }
 
 
 //Current goal: Allow for dynamic box sizes
 button.addEventListener('click', function () {
-    if (mainsize < 64) {
+   mainsize = prompt("New size below 100");
+    if (mainsize < 99) {
         console.log('button press')
         removeall();
-        mainsize = mainsize * 2;
         mainsize2 = mainsize - 1;
         gridcellcreation();
         clonerowcreation();
@@ -92,6 +98,11 @@ button.addEventListener('click', function () {
         gridsize();
         sizecounteration();
     }
+    else {
+        alert("TOO HIGH!!!")
+
+    }
+
 })
 
 //Current goal: remove coloring after deletion...
