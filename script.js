@@ -61,35 +61,38 @@ function removeall() {
         smallcontainer.removeChild(smallcontainer.lastChild);
     }
 }
-    function colorgone() {
-        let zingle = document.getElementsByTagName('gridcell');
-        for (let z = 0; z < zingle.length; z++) {
+function colorgone() {
+    let zingle = document.getElementsByTagName('gridcell');
+    for (let z = 0; z < zingle.length; z++) {
 
-            zingle[z].style.backgroundColor = 'white';
-        }
+        zingle[z].style.backgroundColor = 'white';
     }
+}
 
-    function gridsize () {
-        grids.style.width = (1 / elements.length);
-        grids.style.height = (1 / elements.length);
+function gridsize() {
+    let containers = document.getElementsByTagName('rowcontainer');
+    let width =
+    grids.style.width = "  " + (1 / grids.length) + "";
+    grids.style.height = "  " + (1 / grids.length) + "";
+    containers.style.width = "  " + (1 / containers.length) + "";
+}
 
-    }
 
-
-    //Current goal: Allow for dynamic box sizes
-    button.addEventListener('click', function () {
-        if (mainsize < 64) {
+//Current goal: Allow for dynamic box sizes
+button.addEventListener('click', function () {
+    if (mainsize < 64) {
         console.log('button press')
         removeall();
         mainsize = mainsize * 2;
         mainsize2 = mainsize - 1;
         gridcellcreation();
         clonerowcreation();
+        gridsize();
         colorgone();
         colorenabler();
         sizecounteration();
-        }
-    })
+    }
+})
 
 //Current goal: remove coloring after deletion...
 
