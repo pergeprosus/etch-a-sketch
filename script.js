@@ -13,7 +13,7 @@ function sizecounteration() {
 }
 sizecounteration();
 function gridcellcreation() {
-    for (let q = 0; q <= mainsize2; q++) {
+    for (let q = 0; q <= mainsize - 1; q++) {
         let cell = document.createElement("gridcell");
         container.appendChild(cell);
         let grids = document.querySelectorAll("gridcell");
@@ -22,7 +22,7 @@ function gridcellcreation() {
 }
 gridcellcreation();
 function clonerowcreation() {
-    for (let j = 0; j <= mainsize2 - 1; j++) {
+    for (let j = 0; j <= mainsize - 2; j++) {
         let cell = document.createElement("gridcell");
         let containerclone = container.cloneNode(true);
         smallercontainer.appendChild(containerclone);
@@ -54,11 +54,12 @@ function scaler() {
 let elements = container.getElementsByTagName('gridcell');
 
 function removeall() {
-    for (let i = 0; i < mainsize2; i++) {
+    for (let i = 0; i <= mainsize2; i++) {
         let smallcontainer = document.getElementById('smallercontainer');
         let containers = document.getElementsByTagName('rowcontainer');
         let elements = container.getElementsByTagName('gridcell');
         smallcontainer.removeChild(smallcontainer.lastChild);
+        console.log("erasure")
     }
 }
 function colorgone() {
@@ -71,32 +72,31 @@ function colorgone() {
 
 function gridsize() {
     let containers = document.getElementsByTagName('rowcontainer');
-    let width;
-    let gridso = document.getElementsByClassName('gridcell');
-    
-    for (let n = 0; n < gridso.length; n++) {
+    let gridso = document.getElementsByTagName('gridcell');
 
-    
-    gridso[n].style.width = "  " + (1 / grids.length) + "";
-    gridso[n].style.height = "  " + (1 / grids.length) + "";
-    containers.style.width = "  " + (1 / containers.length) + "";
+    for (let n = 0; n < gridso.length; n++) {
+       
+            gridso[n].style.width = gridso[n].offsetHeight;
+           // gridso[n].style.height = "  " + (1 / gridso.length) + "px";
+            console.log("achieved")
+        
     }
 }
 
 
 //Current goal: Allow for dynamic box sizes
 button.addEventListener('click', function () {
-   mainsize = prompt("New size below 100");
+    mainsize = prompt("New size below 100");
     if (mainsize < 99) {
         console.log('button press')
         removeall();
         mainsize2 = mainsize - 1;
         gridcellcreation();
-        clonerowcreation();
-        colorgone();
-        colorenabler();
+        clonerowcreation()
         gridsize();
-        sizecounteration();
+        colorgone();
+       colorenabler();
+       sizecounteration();
     }
     else {
         alert("TOO HIGH!!!")
