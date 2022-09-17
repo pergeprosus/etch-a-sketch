@@ -1,4 +1,4 @@
-let mainsize = 16;
+let mainsize = 8;
 let mainsize2 = mainsize - 1;
 let smallercontainer = document.getElementById("smallercontainer");
 let biggercontainer = document.getElementById("biggercontainer");
@@ -58,7 +58,8 @@ function removeall() {
         let containers = document.getElementsByTagName('rowcontainer');
         let container = document.getElementById('rowcontainer');
         smallcontainer.removeChild(smallcontainer.lastChild);
-        container.removeChild(container.lastChild)
+        container.removeChild(container.lastChild);
+        
     }
     console.log("removed")
 }
@@ -87,19 +88,21 @@ function gridsize() {
 //Current goal: Allow for dynamic box sizes
 button.addEventListener('click', function () {
     mainsize = prompt("Enter the new size (must be below 100)");
-    if (mainsize < 100 && mainsize !== null) {
-        console.log('button press')
+    if (mainsize < 100 && mainsize !== null && mainsize !== "") {
+        console.log('button press');
         removeall();
+
         gridcellcreation();
         clonerowcreation();
         gridsize();
         colorgone();
         colorenabler();
         sizecounteration();
+        console.log(mainsize)
     }
     else {
-        alert("INVALID ENTRY")
-
+        alert("INVALID ENTRY");
+        mainsize = 8;
     }
 
 })
