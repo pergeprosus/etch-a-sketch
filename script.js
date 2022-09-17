@@ -87,9 +87,9 @@ button.addEventListener('click', function () {
         mainsize2 = mainsize - 1;
         gridcellcreation();
         clonerowcreation();
-        gridsize();
         colorgone();
         colorenabler();
+        gridsize();
         sizecounteration();
     }
 })
