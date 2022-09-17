@@ -23,7 +23,6 @@ function gridcellcreation() {
 gridcellcreation();
 function clonerowcreation() {
     for (let j = 0; j <= mainsize - 2; j++) {
-        let cell = document.createElement("gridcell");
         let containerclone = container.cloneNode(true);
         smallercontainer.appendChild(containerclone);
         console.log('number of clone rows (cells - 1)')
@@ -57,8 +56,10 @@ function removeall() {
     for (let i = 0; i <= mainsize2; i++) {
         let smallcontainer = document.getElementById('smallercontainer');
         let containers = document.getElementsByTagName('rowcontainer');
+        let container = document.getElementById('rowcontainer');
         let elements = container.getElementsByTagName('gridcell');
         smallcontainer.removeChild(smallcontainer.lastChild);
+        container.removeChild(container.lastChild)
         console.log("erasure")
     }
 }
@@ -75,11 +76,11 @@ function gridsize() {
     let gridso = document.getElementsByTagName('gridcell');
 
     for (let n = 0; n < gridso.length; n++) {
-       
-            gridso[n].style.width = gridso[n].offsetHeight;
-           // gridso[n].style.height = "  " + (1 / gridso.length) + "px";
-            console.log("achieved")
-        
+
+        gridso[n].style.width = gridso[n].offsetHeight;
+        // gridso[n].style.height = "  " + (1 / gridso.length) + "px";
+        console.log("achieved")
+
     }
 }
 
@@ -95,8 +96,8 @@ button.addEventListener('click', function () {
         clonerowcreation()
         gridsize();
         colorgone();
-       colorenabler();
-       sizecounteration();
+        colorenabler();
+        sizecounteration();
     }
     else {
         alert("TOO HIGH!!!")
