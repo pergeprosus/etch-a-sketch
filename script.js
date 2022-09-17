@@ -46,9 +46,9 @@ function scaler() {
     let elements = container.getElementsByTagName('gridcell');
     let smallercontainer = document.getElementById("smallercontainer");
     let smalcontainlength = document.getElementById("smallercontainer").childElementCount;
-    for (let i = 0; i < elements.length; i++) {
+    for (let i = 0; i <= elements.length; i++) {
         let element = elements[i];
-        elements.style.transform = "scale(" + (1 / elements.length) + ")";
+        element.style.transform = "scale(" + (1 / elements.length) + ")";
     }
 }
 let elements = container.getElementsByTagName('gridcell');
@@ -68,6 +68,13 @@ function removeall() {
             zingle[z].style.backgroundColor = 'white';
         }
     }
+
+    function gridsize () {
+        grids.style.width = (1 / elements.length);
+        grids.style.height = (1 / elements.length);
+
+    }
+
 
     //Current goal: Allow for dynamic box sizes
     button.addEventListener('click', function () {

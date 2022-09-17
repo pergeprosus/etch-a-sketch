@@ -22,8 +22,8 @@
  .griddy {
      background: white;
      display: inline-block;
-     min-width: 1vh;
-     min-height: 1vh;
+     width: 2vh;
+     height: 2vh;
      border: 0.5px solid black;
  }
 
@@ -48,12 +48,11 @@
 
  #rowcontainer,
  rowcontainer {
-     display: inline-block;
+     display: inline-flex;
      background: pink;
      margin: 0;
      padding: 0;
      align-content: flex-start;
-     display: flex;
      max-width: fit-content;
  }
 
@@ -76,6 +75,8 @@
      max-width: 480px;
      flex-direction:column;
      flex-wrap:wrap;
+     justify-items: center;
+     align-items: center;
 
  }
 
