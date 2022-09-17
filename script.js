@@ -57,11 +57,10 @@ function removeall() {
         let smallcontainer = document.getElementById('smallercontainer');
         let containers = document.getElementsByTagName('rowcontainer');
         let container = document.getElementById('rowcontainer');
-        let elements = container.getElementsByTagName('gridcell');
         smallcontainer.removeChild(smallcontainer.lastChild);
         container.removeChild(container.lastChild)
-        console.log("erasure")
     }
+    console.log("removed")
 }
 function colorgone() {
     let zingle = document.getElementsByTagName('gridcell');
@@ -79,7 +78,7 @@ function gridsize() {
 
         gridso[n].style.width = gridso[n].offsetHeight;
         //gridso[n].style.height = "  " + (1 / gridso.length) + "px";
-      console.log("achieved")
+        console.log("achieved")
 
     }
 }
@@ -88,11 +87,11 @@ function gridsize() {
 //Current goal: Allow for dynamic box sizes
 button.addEventListener('click', function () {
     mainsize = prompt("Enter the new size (must be below 100)");
-    if (mainsize < 100) {
+    if (mainsize < 100 && mainsize !== null) {
         console.log('button press')
         removeall();
         gridcellcreation();
-        clonerowcreation()
+        clonerowcreation();
         gridsize();
         colorgone();
         colorenabler();
@@ -104,7 +103,5 @@ button.addEventListener('click', function () {
     }
 
 })
-
-//Current goal: remove coloring after deletion...
-
-//blocks go form 30x32 to 15x32...half shirnk...na good.
+//ERAUSRE ONLY DOES 16...FIX THIS!
+//rows get removed after second time even if equal...how to fix?
