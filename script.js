@@ -75,7 +75,7 @@ function removeall() {
         console.log('button press')
         removeall();
         mainsize = mainsize * 2;
-
+        mainsize2 = mainsize - 1;
         gridcellcreation();
         clonerowcreation();
         colorgone();
@@ -85,3 +85,5 @@ function removeall() {
     })
 
 //Current goal: remove coloring after deletion...
+
+//blocks go form 30x32 to 15x32...half shirnk...na good.
