@@ -31,10 +31,9 @@ clonerowcreation();
 function colorenabler() {
     let zingle = document.getElementsByTagName('gridcell');
     for (let z = 0; z < zingle.length; z++) {
-        let randomcolor;
-        
+        let randomcolor = "#" + (Math.floor(Math.random()*16777215).toString(16));
         zingle[z].addEventListener('mouseover', function () {
-            zingle[z].style.backgroundColor = 'black';
+            zingle[z].style.backgroundColor = randomcolor;
         })
     }
 }
