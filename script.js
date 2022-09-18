@@ -1,4 +1,4 @@
-let mainsize = 5;
+let mainsize = 8;
 let smallercontainer = document.getElementById("smallercontainer");
 let biggercontainer = document.getElementById("biggercontainer");
 let container = document.getElementById("rowcontainer");
@@ -31,6 +31,8 @@ clonerowcreation();
 function colorenabler() {
     let zingle = document.getElementsByTagName('gridcell');
     for (let z = 0; z < zingle.length; z++) {
+        let randomcolor;
+        
         zingle[z].addEventListener('mouseover', function () {
             zingle[z].style.backgroundColor = 'black';
         })
@@ -87,7 +89,6 @@ button.addEventListener('click', function () {
         removeall();
         gridcellcreation();
         mainsize++;
-
         clonerowcreation();
         colorenabler();
         colorgone();
