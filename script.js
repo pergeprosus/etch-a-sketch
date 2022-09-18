@@ -1,5 +1,4 @@
-let mainsize = 8;
-let mainsize2 = mainsize - 1;
+let mainsize = 5;
 let smallercontainer = document.getElementById("smallercontainer");
 let biggercontainer = document.getElementById("biggercontainer");
 let container = document.getElementById("rowcontainer");
@@ -13,7 +12,7 @@ function sizecounteration() {
 }
 sizecounteration();
 function gridcellcreation() {
-    for (let q = 0; q <= mainsize - 1; q++) {
+    for (let q = 0; q < mainsize; q++) {
         let cell = document.createElement("gridcell");
         container.appendChild(cell);
         let grids = document.querySelectorAll("gridcell");
@@ -22,7 +21,7 @@ function gridcellcreation() {
 }
 gridcellcreation();
 function clonerowcreation() {
-    for (let j = 0; j <= mainsize - 2; j++) {
+    for (let j = 0; j < (mainsize - 1); j++) {
         let containerclone = container.cloneNode(true);
         smallercontainer.appendChild(containerclone);
         console.log('number of clone rows (cells - 1)')
@@ -53,16 +52,15 @@ function scaler() {
 let elements = container.getElementsByTagName('gridcell');
 
 function removeall() {
-    for (let i = 0; i <= mainsize2; i++) {
+    for (let i = 1; i < mainsize; i++) {
         let smallcontainer = document.getElementById('smallercontainer');
-        let containers = document.getElementsByTagName('rowcontainer');
-        let container = document.getElementById('rowcontainer');
+        let rowcontainer = document.getElementById('rowcontainer');
+        rowcontainer.removeChild(rowcontainer.lastChild);
         smallcontainer.removeChild(smallcontainer.lastChild);
-        container.removeChild(container.lastChild);
-        
     }
-    console.log("removed")
+
 }
+
 function colorgone() {
     let zingle = document.getElementsByTagName('gridcell');
     for (let z = 0; z < zingle.length; z++) {
@@ -76,35 +74,31 @@ function gridsize() {
     let gridso = document.getElementsByTagName('gridcell');
 
     for (let n = 0; n < gridso.length; n++) {
-
         gridso[n].style.width = gridso[n].offsetHeight;
-        //gridso[n].style.height = "  " + (1 / gridso.length) + "px";
         console.log("achieved")
-
     }
 }
 
 
 //Current goal: Allow for dynamic box sizes
 button.addEventListener('click', function () {
-    mainsize = prompt("Enter the new size (must be below 100)");
-    if (mainsize < 100 && mainsize !== null && mainsize !== "") {
-        console.log('button press');
-        removeall();
-
-        gridcellcreation();
-        clonerowcreation();
-        gridsize();
-        colorgone();
-        colorenabler();
-        sizecounteration();
+    if (mainsize < 100) {
         console.log(mainsize)
+        removeall();
+        gridcellcreation();
+        mainsize++;
+
+        clonerowcreation();
+        colorenabler();
+        colorgone();
+        sizecounteration();
     }
     else {
         alert("INVALID ENTRY");
-        mainsize = 8;
     }
 
 })
 //ERAUSRE ONLY DOES 16...FIX THIS!
 //rows get removed after second time even if equal...how to fix?
+//The issue seems to be a removal of a grid?
+//Removall is deleting the main container?

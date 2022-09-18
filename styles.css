@@ -1,4 +1,4 @@
- html,
+html,
  body {
      display: flex;
      flex-direction: column;
@@ -24,6 +24,7 @@
      display: inline-block;
      border: 1px solid black;
      flex-grow: 1;
+     border-radius: 10px;
 
  }
 
